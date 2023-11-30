@@ -7,6 +7,19 @@ typedef struct {
     unsigned char blue;
 } Color;
 
+void get_color(Color *curr);
+unsigned long colorToHTML(Color curr);
+void print_color(Color rgb);
+
+int main() {
+    Color test;
+
+    get_color(&test);
+    print_color(test);
+
+    return 0;
+}
+
 void get_color(Color *curr) {
     scanf("%hhu%hhu%hhu", &curr->red, &curr->green, &curr->blue);
 }
@@ -19,13 +32,4 @@ void print_color(Color rgb) {
     printf("%hhu %hhu %hhu\n", rgb.red, rgb.green, rgb.blue);
     printf("%lu\n", colorToHTML(rgb));
     printf("%X%X%X", rgb.red, rgb.green, rgb.blue);
-}
-
-int main() {
-    Color test;
-
-    get_color(&test);
-    print_color(test);
-
-    return 0;
 }
