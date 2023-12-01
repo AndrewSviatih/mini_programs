@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-int main () {
+int main() {
 
-    FILE * fin = fopen("text_in.txt", "r");
-    FILE * fout = fopen("text_out.txt", "w");
+    FILE *fin = fopen("text_in.txt", "r");
+    FILE *fout = fopen("text_out.txt", "w");
 
     int len_arr;
 
@@ -24,5 +24,4 @@ int main () {
     }
 
     fclose(fout);
-
 }
